@@ -16,7 +16,7 @@ body {
   background-color: #f0f0f5;
   min-height: 100vh;
   padding: 20px;
-   overflow-y: auto;
+  overflow-y: auto;
 }
 
 header {
@@ -237,10 +237,9 @@ button {
 
 /* Tooltip styling */
 .tooltip-container {
-  position: fixed;
-  z-index: -2;
-  top: 0;
-  left: 0;
+  position: relative;
+ 
+  
 }
 
 [data-tooltip] {
@@ -251,9 +250,9 @@ button {
 [data-tooltip]::after {
   content: attr(data-tooltip); /* Get tooltip text from the attribute */
   position: absolute; /* Positioning */
-  top: 50%; /* Center vertically */
-  left: 120%; /* Position to the right */
-  transform: translateY(-50%) translateX(10px); /* Center adjustment and slide */
+  top: 150%; /* Center vertically */
+  left: -50%; /* Position to the right */
+  transform: translateY(-100%) translateX(-20%); /* Center adjustment and slide */
   background-color: #0078d4; /* Tooltip background color */
   color: white; /* Tooltip text color */
   padding: 5px 10px; /* Padding for the tooltip */
@@ -267,7 +266,7 @@ button {
 
 [data-tooltip]:hover::after {
   opacity: 1; /* Make tooltip visible on hover */
-  transform: translateY(-50%) translateX(0); /* Slide into position */
+  transform: translateY(-50%) translateX(-20%); /* Slide into position */
 }
 
 .chat-message {
