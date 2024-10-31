@@ -31,7 +31,7 @@ async function sendMessage() {
 
     // Fetch response from the new API
     try {
-        const response = await fetch(`https://nash-rest-api.vercel.app/blackbox/model/gpt4o?prompt=${encodeURIComponent(prompt)}`);
+        const response = await fetch(`https://nash-rest-api.vercel.app/gpt4o?prompt=${encodeURIComponent(prompt)}`);
         const data = await response.json();
         const botResponse = formatBotResponse(data.response);
 
