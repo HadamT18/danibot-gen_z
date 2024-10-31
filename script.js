@@ -25,6 +25,9 @@ async function sendMessage() {
     sendButton.disabled = true;
     const typingIndicator = document.getElementById("typing-indicator");
     typingIndicator.style.display = "flex"; // Show typing indicator inside chat box
+     document.getElementById("user-input").value = "";
+    sendButton.style.cursor = "no-drop";
+    sendButton.classList.add("disabled-button");
 
     // Fetch response from the new API
     try {
@@ -51,7 +54,7 @@ async function sendMessage() {
     }
 
     // Clear input field and re-enable send button
-    document.getElementById("user-input").value = "";
+    sendButton.style.cursor = "pointer";
     sendButton.disabled = false;
 }
 
