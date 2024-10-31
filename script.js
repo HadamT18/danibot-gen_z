@@ -73,8 +73,9 @@ function addMessage(content, messageType) {
         messageElement.classList.add('slide-in'); // Add the animation class after a short delay
     }, 0); // Using 0 to ensure it's applied after the element is added to the DOM
 
-    // Scroll to the bottom of the chat box
-    chatBox.scrollTop = chatBox.scrollHeight;
+   // Scroll to the bottom of the chat box after the bot response is displayed
+    document.body.scrollTop = document.body.scrollHeight; // For Safari
+    document.documentElement.scrollTop = document.documentElement.scrollHeight;
     return messageElement;
 }
 
